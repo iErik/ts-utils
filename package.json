@@ -7,10 +7,23 @@
   "author": "Erik isidore <ericssonico@proton.me>",
   "license": "GPL-3",
   "typings": "typings.d.ts",
+  "publishConfig": {
+    "@ierik:registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iErik/react-generics.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iErik/react-generics/issues"
+  },
   "exports": {
     ".": {
       "import": "./src/index.ts",
       "require": "./src/index.ts"
     }
+  },
+  "scripts": {
+    "release": "standard-version && git push --follow-tags && npm publish"
   }
 }
