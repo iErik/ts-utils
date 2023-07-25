@@ -12,10 +12,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iErik/react-generics.git"
+    "url": "git+https://github.com/iErik/ts-utils.git"
   },
   "bugs": {
-    "url": "https://github.com/iErik/react-generics/issues"
+    "url": "https://github.com/iErik/ts-utils/issues"
   },
   "exports": {
     ".": {
