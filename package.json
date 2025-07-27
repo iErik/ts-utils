@@ -2,11 +2,12 @@
   "name": "@ierik/ts-utils",
   "version": "1.0.2",
   "description": "",
-  "main": "src/index.ts",
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "types": "src/index.d.ts",
   "keywords": [],
   "author": "Erik isidore <ericssonico@proton.me>",
   "license": "GPL-3",
-  "typings": "typings.d.ts",
   "publishConfig": {
     "@ierik:registry": "https://npm.pkg.github.com"
   },
@@ -19,15 +20,17 @@
   },
   "exports": {
     ".": {
-      "import": "./src/index.ts",
-      "require": "./src/index.ts"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
     }
   },
   "scripts": {
-    "release": "standard-version && git push --follow-tags && npm publish",
-    "pre-release": "standard-version && git push --follow-tags"
+    "build": "tsc",
+    "release": "standard-version && git push --follow-tags && npm publish"
   },
   "devDependencies": {
-    "standard-version": "^9.5.0"
+    "standard-version": "^9.5.0",
+    "typescript": "^5.8.3"
   }
 }

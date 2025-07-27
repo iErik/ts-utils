@@ -33,6 +33,10 @@ jobs:
           git config --global user.name "Erik Isidore"
           git config --global user.email "ericssonico@proton.me"
 
+      - name: Compile TypeScript files
+        run: |
+          pnpm run build
+
       - run: pnpm run release
         env:
           NPM_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
