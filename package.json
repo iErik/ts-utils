@@ -24,7 +24,8 @@
     }
   },
   "scripts": {
-    "release": "standard-version && git push --follow-tags && npm publish"
+    "release": "standard-version && git push --follow-tags && npm publish",
+    "pre-release": "standard-version && git push --follow-tags",
   },
   "devDependencies": {
     "standard-version": "^9.5.0"
